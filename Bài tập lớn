@@ -1,0 +1,47 @@
+/Chuong trinh quan li sach
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+typedef struct {
+	char Tensach[25],Theloai[25],Tentacgia[25];
+	int Namxuatban,Gia;
+}book_st;
+void Nhap(book_st a[5]){
+	for(int i=0; i < 5; i++){
+		printf("\nNhap du lieu cua sach %d:\n", i +1);
+		printf("+ Ten sach: ");
+		gets(a[i].Tensach);
+		printf("+ The loai: ");
+		gets(a[i].Theloai);
+		printf("+ Ten tac gia: ");
+		gets(a[i].Tentacgia);
+		printf("+ Nam xuat ban: ");
+		scanf("%d",a[i].Namxuatban);
+		printf("+ Gia: ");
+		scanf("%d",a[i].Gia);
+		fflush(stdin);
+	}
+}
+void Tieude()
+{
+	printf("\n");
+	printf("%-3s|", "Stt");
+	printf("%-15s|", "Ten sach");
+	printf("%-15s|", "Ten tac gia");
+	printf("%-10s|", "The loai");
+	printf("%-12s|", "Nam xuat ban");
+	printf("%-8s|", "Gia");
+	printf("\n");
+}
+void Hang(book_st a[5], int j )
+{
+	printf("%03d|", j + 1);
+	printf("%-15s|", a[j].Tensach);
+	printf("%-15s|", a[j].Tentacgia);
+	printf("%-10s|", a[j].Theloai);
+	printf("%-12d|", a[j].Namxuatban);
+	printf("%-8d|\n", a[j].Gia);
+}
