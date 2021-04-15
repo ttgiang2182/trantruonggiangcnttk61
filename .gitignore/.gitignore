@@ -1,0 +1,36 @@
+//Chuong trinh quan li sach
+
+#include <stdio.h>
+#include <string>
+
+typedef struct {
+	char Tensach[25],Theloai[25],Tentacgia[25];
+	int Namxuatban,Gia;
+}book_st;
+void Nhap(book_st a[5]){
+	for(int i=0; i < 5; i++){
+		printf("\nNhap du lieu cua sach %d:\n", i +1);
+		printf("+ Ten sach: ");
+		gets(a[i].Tensach);
+		printf("+ The loai: ");
+		gets(a[i].Theloai);
+		printf("+ Ten tac gia: ");
+		gets(a[i].Tengiacgia);
+		printf("+ Nam xuat ban: ");
+		scanf("%d",a[i].Namxuatban);
+		printf("+ Gia: ");
+		sacnf("%d",a[i].Gia);
+		fflush(stdin);
+	}
+}
+void Tieude()
+{
+	printf("\n");
+	printf("%-3s||", "Stt");
+	printf("%-28s||", "Tensach");
+	printf("%-50s||", "Tentacgia");
+	printf("%-25s||", "Theloai");
+	printf("%-16||", "Namxuatban");
+	printf("%-8s||", "Gia");
+	printf("\n");
+}
