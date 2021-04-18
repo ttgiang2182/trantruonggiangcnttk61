@@ -47,9 +47,9 @@ void Hang(book_st a[5], int j )
 }
 void Hoanvi(book_st *book1, book_st *book2)
 {
-	book_st t = *book1;
+	book_st temp = *book1;
 	*book1 = *book2;
-	*book2 = t;
+	*book2 = temp;
 }
 void Sapxep(book_st a[5])
 {
