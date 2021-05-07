@@ -11,7 +11,7 @@ typedef struct {
 }book_st;
 void Nhap(book_st a[5]){
 	for(int i=0; i < 5; i++){
-		printf("\nNhap du lieu cua sach %d:\n", i +1);
+		printf("\nNhap du lieu cua sach %d:\n", i + 1);
 		printf("+ Ten sach: ");
 		gets(a[i].Tensach);
 		printf("+ The loai: ");
@@ -19,10 +19,11 @@ void Nhap(book_st a[5]){
 		printf("+ Ten tac gia: ");
 		gets(a[i].Tentacgia);
 		printf("+ Nam xuat ban: ");
-		scanf("%d",a[i].Namxuatban);
+		scanf("%d", &a[i].Namxuatban);
 		printf("+ Gia: ");
-		scanf("%d",a[i].Gia);
+		scanf("%d", &a[i].Gia);
 		fflush(stdin);
+		
 	}
 }
 void Tieude()
